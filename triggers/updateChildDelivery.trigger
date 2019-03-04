@@ -6,6 +6,6 @@ trigger updateChildDelivery on Account (after update) {
     List<Delivery__c> updatelist=[select id from Delivery__c where Account__c=: accSetID];
     for(Delivery__c d :updatelist ){
         d.Delivery_Date__c=system.today();
-    }
+    }// added code in dev branch
     update(updatelist);// changin the code for github 
 }
