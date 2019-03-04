@@ -5,7 +5,7 @@ trigger chatter_answers_question_escalation_to_case_trigger on Question (after u
                 q = [select Id, Title, Body, CommunityId, createdById, createdBy.AccountId, createdBy.ContactId from Question where Id = :q.Id];
                 Case newCase = new Case(Origin='Chatter Answers', OwnerId=q.CreatedById, QuestionId=q.Id, CommunityId=q.CommunityId, Subject=q.Title, Description = (q.Body == null? null: q.Body.stripHtmlTags()), AccountId=q.CreatedBy.AccountId, ContactId=q.CreatedBy.ContactId);
                 insert newCase;
-            }
+            }// no code is being added ot my repository
         } catch (Exception e) {
             //In case you have issues with code coverage for this section, you can move this to a separate helper class method which can be tested separately
             Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();

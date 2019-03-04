@@ -7,5 +7,5 @@ trigger updateChildDelivery on Account (after update) {
     for(Delivery__c d :updatelist ){
         d.Delivery_Date__c=system.today();
     }
-    update(updatelist);
+    update(updatelist);// changin the code for github 
 }
