@@ -1,7 +1,7 @@
 /*
  * Author: Enrico Murru (http://enree.co, @enreeco)
  */
-public class InputLookupAuraController {
+public class InputLookupAuraController {// i am changin this class from VS code
     
     /*
      * Loads the initial value of the given SObject type with ID "value"
