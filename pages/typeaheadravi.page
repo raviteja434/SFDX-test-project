@@ -1,0 +1,39 @@
+<!-- Form that demonstrates use of the Force.com Typeahead component -->
+<apex:page showHeader="true" sidebar="true" title="Typeahead Test Page" controller="typeAheadController">
+<apex:form >
+    <style>
+        .sample-form { 
+            margin: 20px;
+            width: 400px;
+            font-size: 16px; 
+        }
+        .sample-form h3 { 
+            margin:8px 0; 
+            display:block; 
+        }
+        .sample-form button { 
+            margin: 18px 0; 
+            padding: 5px 10px;
+        }
+    </style>
+    
+    <div class="sample-form">
+
+        
+
+        <h3>Course Name:</h3>
+        <c:Typeahead searchBoxId="acctSearchBox" object="Course__c" primaryField="Place__c" secondaryField="Email__c" 
+                searchScope="ALL" placeholder="Type something..." minSearchLength="2" 
+                destinationForSelectedId="accountId" destinationForSelectedValue="accountName" stealFocus="false" />  
+
+        <apex:inputhidden value="{!teststring}" id="accountId" />     
+        <apex:inputhidden value="{!teststring1}" id="accountName" />     
+               
+        <apex:commandButton value="Test me" action="{!method1}" />
+        
+        
+        <!-- <button onclick="alert( 'The hidden Id field contains ' + document.getElementById('accountId').value + '\nThe hidden Name field contains ' + document.getElementById('accountName').value );">Submit</button> --> 
+
+    </div>
+</apex:form>
+</apex:page>

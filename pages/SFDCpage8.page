@@ -1,0 +1,13 @@
+<apex:page >
+<style>
+.sample {
+
+    font-weight: bold;
+
+}
+</style>
+    
+
+    <apex:outputText value="Styled Text in a sample style class" styleClass="sample"/>
+
+</apex:page>

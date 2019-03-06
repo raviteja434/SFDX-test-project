@@ -1,0 +1,41 @@
+<apex:page standardController="Account">
+<script>
+$(document).ready(function(){
+$('#publisherAttachContentPost').trigger('click');
+
+$('#chatterUploadFileAction').trigger('click');
+
+$('.uploadFileSizeLimit').hide();           
+
+$('.contentPublisherSlideDown.customPanel.alignTop').css('border', '0');
+
+$('.clearContentPanelButtonContainer').hide();
+
+$('.publisherFeedItemTypeChoices').hide();      
+
+$('.cxfeedinnerwrapper').hide();  
+
+$('.publisherBottomBarPlaceholder').hide();
+$('.publisherTextAreaPlaceholder.alignCenter').remove();
+$('.publisherTextAreaPlaceholder.alignTop').remove();
+alert('ready');
+});
+
+function uploadFile(){
+    if($('.file')[1].files.length > 0){
+
+                   $('#publishersharebutton').trigger('click');
+
+}else{
+
+                   alert('Please select a file');
+
+}            
+}
+
+</script>
+ <apex:pageBlock title="Upload Documents">
+ <chatter:feed entityId="{!$CurrentPage.parameters.Id}" />
+ <input type="button" value="Upload" onclick="uploadFile()"/>
+ </apex:pageBlock>
+</apex:page>

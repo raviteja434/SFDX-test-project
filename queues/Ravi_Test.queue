@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>test@gmail.com</email>
+    <name>Ravi Test</name>
+    <queueMembers>
+        <users>
+            <user>harish.vennam@gmail.com.dev</user>
+            <user>raviteja434@gmail.com</user>
+            <user>testingteam12321@gmail.com</user>
+            <user>vrtgroup@vrtgroup-developer-edition.na15.force.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Smart_Card__c</sobjectType>
+    </queueSobject>
+</Queue>

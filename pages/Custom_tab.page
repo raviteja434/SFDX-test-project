@@ -1,0 +1,13 @@
+<apex:page standardController="pizza__c" showHeader="false" id="testPage">          
+    <!-- Create Tab panel -->
+    <apex:form id="myForm">
+        <apex:tabPanel switchType="client" selectedTab="tabdetails" id="AccountTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">
+            <apex:tab label="Details" name="AccDetails" id="tabdetails"> 
+                tab 1            </apex:tab>
+            <apex:tab label="Contacts" name="Contacts" id="tabContact">
+                content for tab two
+            </apex:tab>
+        </apex:tabPanel>
+    </apex:form>
+      
+</apex:page>

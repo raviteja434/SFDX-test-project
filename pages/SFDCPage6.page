@@ -1,0 +1,17 @@
+<apex:page standardController="Account"  applyBodyTag="false">
+    <head>
+        <style>
+            body { font-family: 'serif'; }
+            .companyName { font: bold 55px; color: brown; } 
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>New Account Name!</h1>
+        <apex:panelGrid columns="1" width="100%">
+            <apex:outputText value="{!account.Name}" styleClass="companyName"/>
+            <apex:outputText value="{!NOW()}" styleClass="companyName"></apex:outputText>
+        </apex:panelGrid>
+        </center>
+    </body>
+</apex:page>
