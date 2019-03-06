@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created by Lightning App Builder</description>
+    <flexiPage>Testing_Component_Ravi_2</flexiPage>
+    <label>Testing Component Ravi 2</label>
+    <mobileReady>true</mobileReady>
+    <motif>Custom91: Shield</motif>
+</CustomTab>

@@ -1,0 +1,17 @@
+<apex:page StandardController="Account" extensions="MultiAdd" id="thePage">
+<apex:form >
+<apex:pageblock id="pb" >
+    <apex:pageBlockButtons >
+        <apex:commandbutton value="Next" action="{!Add}" rerender="pb1" />        
+        <apex:commandbutton value="Cancel" action="{!Save}"/>
+    </apex:pageBlockButtons>            
+    <apex:pageBlockSection title="GCC INformation">
+                <apex:inputField value="{!account.name}"/>
+                <apex:inputField value="{!account.site}"/>
+                <apex:inputField value="{!account.type}"/>
+                <apex:inputField value="{!account.accountNumber}"/>
+            </apex:pageBlockSection>         
+    </apex:pageBlock>
+
+</apex:form>
+</apex:page>

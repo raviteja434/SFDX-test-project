@@ -1,0 +1,8 @@
+<apex:page sidebar="true" showHeader="true" >
+hello ashish
+ <p>  <apex:outputLink value="http://google.com/">google search!</apex:outputLink> </p>
+ <p> <apex:outputLink value="http://yahoo.com/">yahoo search!</apex:outputLink> </p>
+{! $Page.page3}
+<apex:outputLink value="{! $Page.page2}">I am me!</apex:outputLink>
+
+</apex:page>

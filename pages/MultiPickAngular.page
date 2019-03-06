@@ -1,0 +1,30 @@
+<apex:page standardStylesheets="false" sidebar="false"             
+        showHeader="false" applyBodyTag="false" applyHtmlTag="false"
+        docType="html-5.0" >
+<apex:includeScript value="http://code.jquery.com/jquery-1.12.4.min.js" />
+    <apex:includeScript value="http://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js" />
+    <apex:stylesheet value="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common.min.css"  />
+    <apex:stylesheet value="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.rtl.min.css"/>
+    <apex:stylesheet value="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.silver.min.css"/>
+    <apex:stylesheet value="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.mobile.all.min.css"/>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Kendo UI Snippet</title>
+</head>
+<body>
+  
+<select id="multiselect" multiple="multiple">
+    <option>Item1</option>
+    <option>Item2</option>
+</select>
+<script>
+$("#multiselect").kendoMultiSelect({
+  animation: false
+});
+</script>
+</body>
+</html>
+
+</apex:page>
