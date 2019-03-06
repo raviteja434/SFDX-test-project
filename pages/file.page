@@ -1,0 +1,6 @@
+<apex:page StandardController="Account" extensions="accountExt">
+<apex:form >
+<apex:outputField value="{!Account.Rating}"/>
+ <apex:outputText value="0000"/>
+ </apex:form>
+</apex:page>

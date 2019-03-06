@@ -1,0 +1,46 @@
+<apex:page StandardController="Account" extensions="accountExt">
+
+<apex:form >
+<apex:pageBlock title="Accounts" >
+    <apex:pageBlockSection title="PageBlock Section" collapsible="false">
+    
+        
+            
+            <apex:inputText label="Phone" value="{!Account.Phone}"/> 
+      
+    
+    
+        
+            <apex:inputField label="Name" value="{!Account.Name}"/>
+        
+    
+        
+            <apex:outputField label="MyCustomName" value="{!Account.Name}"/>
+       
+    </apex:pageblockSection>
+
+
+
+</apex:pageBlock>
+</apex:form>
+<apex:form >
+    <apex:outputLabel >Phone</apex:outputLabel>
+    <apex:inputField label="Phone" value="{!Account.Phone}"/><br/>
+    
+    <apex:outputLabel >Name</apex:outputLabel>
+    <apex:inputField label="Name" value="{!Account.Name}"/><br/>
+    
+    <apex:outputLabel >Output Phone</apex:outputLabel>
+    <apex:outputField value="{!Account.Phone}"/><br/>
+    
+    
+    <apex:outputLabel >Output Name</apex:outputLabel>
+    <apex:outputField value="{!Account.Name}"/><br/>
+    
+   <apex:commandButton action="{!SaveRecord}" value="Save"/>
+    
+</apex:form>
+  
+
+
+</apex:page>

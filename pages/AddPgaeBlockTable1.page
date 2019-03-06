@@ -1,0 +1,46 @@
+<apex:page StandardController="Account" extensions="MultiAdd1" id="thePage">
+<apex:form >
+<apex:pageblock id="pb" >
+    <apex:pageBlockButtons >
+        <apex:commandbutton value="Add" action="{!Add}" rerender="pb1" />        
+        <apex:commandbutton value="Save" action="{!Save}"/>
+    </apex:pageBlockButtons>            
+        <apex:pageblock id="pb1" >            
+       <apex:repeat value="{!lstInner}" var="a" id="re">
+        <apex:panelGrid headerClass="Name">
+                    <apex:facet name="header">Del</apex:facet>
+                    <apex:commandButton value="X" action="{!Del}" rerender="pb1">
+                        <apex:param name="rowToBeDeleted" value="{!a.recCount}" assignTo="{!selectedRowIndex}"></apex:param>
+                    </apex:commandButton>
+                </apex:panelGrid> 
+                Chiller Model:<apex:inputtext value="{!a.ChillerModel}"/>                
+      <apex:pageBlockTable value="{!a.wrapAccountList}" var="accWrap" id="table" title="All Accounts">
+     
+               <apex:column headerValue="CheckBox">                                
+                    <apex:inputCheckbox value="{!accWrap.Test_Checkbox__c}" id="inputId" >
+                    
+                    <apex:param name="rowToBeProcess" value="{!accWrap.Test_Checkbox__c}" assignTo="{!selectedPGBRowIndex}"/>
+                    <apex:actionSupport event="onclick" 
+                                action="{!totalcal}" 
+                                rerender="table,pgr" />
+                       </apex:inputCheckbox>         
+                </apex:column>
+                <apex:column value="{!accWrap.Name}" />
+                <apex:column value="{!accWrap.Total__c}" />
+                 <apex:column value="{!accWrap.Test_Hours__c}" />
+                
+                <apex:column value="{!accWrap.Phone}" />                 
+            </apex:pageBlockTable>
+          
+           <apex:panelGrid headerClass="Name" id="pgr"> 
+           <Center>
+                <b>Total Sell Price:</b><apex:outputText value="{!a.tatolprice}"/>
+                </Center>                   
+                </apex:panelGrid> 
+                
+         </apex:repeat>          
+    </apex:pageBlock>
+        
+</apex:pageblock>
+</apex:form>
+</apex:page>

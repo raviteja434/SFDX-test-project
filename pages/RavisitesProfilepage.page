@@ -1,0 +1,150 @@
+<apex:page >
+    <style>
+.hidelink {
+    text-decoration: none;
+}
+
+.headertitle {
+    font-size: 32px;
+    color: blue;
+    font-family: Time New Roman;
+}
+
+.textlabel {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 100%;
+    color: #333333;
+    padding-left: 5px;
+}
+
+.input {
+    display: block;
+    
+    width: 250px;
+    hight: 30px;
+    font-family: sans-serif;
+    font-size: 12px;
+    box-shadow: none;
+    margin-top:10px;
+    margin-bottom: 0px;
+}
+
+    
+.buttonbg {
+    background: brown;
+    border-left: 2px solid #BDBDBD;
+    border-bottom: 2px solid #BDBDBD;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 3px 5px;
+    width: 100px;
+    
+}
+</style>
+
+    <div style="width: 80%; margin: 0 auto; position: relative;">
+        <apex:form id="theform">
+            
+            <!--<table
+                style="width: 100%; margin-top: 30px; margin-left: 0px; padding: 3px 0px;">
+                <tr>
+                    <td style="text-align: left;"><span class="headertitle">VRT Group</span></td>
+                </tr>
+            </table>-->
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:outputpanel >
+            <table>
+            <tr>
+                <br/><br/><apex:outputtext value="Management team" style=" font-size: 26px;color: blue;font-family: Time New Roman;"/><br/>
+            </tr>
+            <tr>
+                <br/><apex:outputtext style="font-size: 13px" value="Raviteja,Harish and Ashish founded VRT Group in Aug 2012. Since then, the company has grown to more than 4,000 employees worldwide, with a management team that represents some of the most experienced technology professionals in the industry." />
+            </tr>
+            <tr>
+                <table
+                    style="border: 2px dotted blue; float: left; width: 99%; border-radius: 8px 8px 8px 8px; padding: 10px; margin-bottom: 10px; margin-top: 10px;">                   
+                    <tr><td style="border-bottom:2px solid blue;margin-bottom:20px">
+                        <table style="margin-bottom: 15px;margin-left: 15px">
+                            <tr>
+                                <td >
+                                    <apex:outputtext value="Executive Officers" style=" font-size: 26px;color: blue;font-family: Time New Roman;"/><br/>
+                                </td>
+                            </tr>
+                        </table>
+                   </td></tr> 
+                   <tr>
+                       <td>
+                           <table style="margin-top: 15px;margin-left: 15px">
+                            <tr>
+                                <td style="margin-top: 15px;margin-left: 15px">
+                                    <apex:outputtext value="V RaviTeja" style=" font-size: 20px;color: blue;font-family: Time New Roman;"/>&nbsp;&nbsp;&nbsp;
+                                    <apex:outputtext value="CEO and Co-Founder" style=" font-size: 18px;font-family: Time New Roman;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%">
+                                     <apex:image id="theImage" value="{!$Resource.Ravi_Pic}" width="300" height="150" style="margin-left:10px;"/>
+                                
+                                </td> 
+                                <td>
+                                    <apex:outputtext style=" font-size: 13px;line-height: 200%;" value="As VRT’s chief executive officer, Raviteja is responsible for VRTGroup’s day-to-day-operations, as well as leading the company’s product development and technology strategy. He co-founded VRTGroup with Harish in 2012 while pursuing a M.S at Wright State University, and was the first CEO — growing the company to more than 2,000 employees and profitability. From 2012 to 2014, Raviteja was president of products."/>
+                                   <br/><br/>
+                                   <apex:outputtext style=" font-size: 13px;line-height: 200%;" value="Raviteja holds a bachelor’s degree in engineering from the JNTU, India and a master’s degree in Electrical Engineering from Wright State University. He is a member of the Salesforce success community of the Salesforce Corporation, and together with co-founder Harish, Raviteja was honored with the Best Team Price in 2014. He was elected to the National Academy of Engineering in 2010."/>
+                                    <br/>
+                                </td>                           
+                            </tr>
+                            <tr>
+                                <td >
+                                    <apex:outputtext value="Harish Vennam" style=" font-size: 20px;color: blue;font-family: Time New Roman;"/>&nbsp;&nbsp;&nbsp;
+                                    <apex:outputtext value="COO and Co-Founder " style=" font-size: 18px;font-family: Time New Roman;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-top: 15px;margin-left: 15px">
+                                    <apex:image id="theImage1" value="{!$Resource.Harish_pic}" width="300" height="150" style="margin-left:10px;"/>
+
+                                </td>
+                                <td>
+                                    <apex:outputtext style=" font-size: 13px;line-height: 200%;" value="As VRT’s chief operating officer, Harish Vennam is responsible for managing the company's day-to-day operations and reporting them to the chief executive officer (CEO). Harish co-founded VRT Group in 2012 with Raviteja and Ashish. Today, he directs special projects. From 2012 to 2014, Sergey served as president of technology, where he shared responsibility for the company’s day-to-day operations with Raviteja and Ashish."/>
+                                   <br/><br/>
+                                    <apex:outputtext style=" font-size: 13px;line-height: 200%;"  value="Harish received a bachelor’s degree with honors in mathematics and Electrical Engg from the Amrita University, India. He is currently on leave from the M.S program in Electrical Engg  at Wright State University, where he received his master’s degree. Harish is a member of the National Academy of Engineering and a recipient of a National Science Foundation Graduate Fellowship."/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td >
+                                    <apex:outputtext value="Ashish Reddy K" style=" font-size: 20px;color: blue;font-family: Time New Roman;"/>&nbsp;&nbsp;&nbsp;
+                                    <apex:outputtext value="Executive Chairman and Co-Founder" style=" font-size: 18px;font-family: Time New Roman;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="margin-top: 15px;margin-left: 15px">
+                                        <apex:image id="theImage2" value="{!$Resource.Ashish_pic}" width="300" height="150" style="margin-left:10px;"/>
+                                </td>
+                                <td>
+                                    <apex:outputtext style=" font-size: 13px;line-height: 200%;" value="Ashish helped grow the company from a Silicon Valley startup to a global leader in technology. As executive chairman, he is responsible for the external matters of VRT: building partnerships and broader business relationships, government outreach and technology thought leadership, as well as advising the CEO and senior leadership on business and policy issues."/>
+                                    <br/><br/>
+                                    <apex:outputtext style=" font-size: 13px;line-height: 200%;" value="From 2012-2014, Ashish served as VRT’s chief executive officer, overseeing the company’s technical and business strategy alongside founders Raviteja and Harish. Under his leadership, VRTGroup dramatically scaled its infrastructure and diversified its product offerings while maintaining a strong culture of innovation. Ashish is a member of the President’s Council of Advisors on Science and Technology and the Prime Minister’s Advisory Council."/>
+                                </td>                           
+                            </tr>                       
+                        </table>                     
+                       </td>
+                  </tr>                  
+                </table>
+            </tr>
+            </table>
+            
+            <table style="margin-left:200px;">
+                <tr >
+                    <td >
+                        <br/><apex:outputtext value="If you have any questions, please contact our Office at 585-755-2520 or email "/>
+                        <apex:outputLink value="ravitejavida@gmail.com" style="color:brown;">supportteam@vrtgroup.com</apex:outputLink>
+                    </td>
+                    
+                </tr>
+            
+            </table>
+            </apex:outputpanel>
+       </apex:form>
+    </div>
+</apex:page>

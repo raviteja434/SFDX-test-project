@@ -1,0 +1,19 @@
+<apex:page standardController="Account">
+<p> {! IF ( CONTAINS('salesforce.com','force.com'), 'Yeah', 'No') } </p>
+<p> {! IF ( DAY(TODAY()) > 19, 'After the 19th', 'On or before the 19th') } </p>
+<p> {! if ((1!=1),'yes','no')}</p>
+
+<!----------------------------------->
+<p>Hello {! $User.FirstName}!</p>
+<p>You are viewing the  account.</p>
+{! Account.name}
+
+<p>Here's the Ticker Symbol field: {! account.TickerSymbol}</p>
+
+<!------------------------------------------->
+
+<p>Here's the owner of this account: {! account.Owner.Email}</p>
+
+
+
+</apex:page>

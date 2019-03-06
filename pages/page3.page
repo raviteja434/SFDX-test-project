@@ -1,0 +1,11 @@
+<apex:page sidebar="true">
+{! $user.firstName &'  '& $user.lastName}
+ <p> Today's Date is {! TODAY()} </p>
+ <p> Next week it will be {! TODAY() + 7} </p>
+<!-------------------------------------------> 
+<p> the year today is {! YEAR( TODAY())} </P>
+<P> tmro will be the day number {!DAY(today() + 1)} </p>
+<p> find the maximum: {! max(1,2,3,4,8,5,9,4,7,3,5)} </p>
+<p> the squre root of 25 is : {! sqrt(25)} </p>
+<P> is it true? {! contains ('salesforce.com' , 'force.com')} </p>
+</apex:page>

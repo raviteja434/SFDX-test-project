@@ -1,0 +1,21 @@
+<apex:page applyBodyTag="false" docType="html-5.0" showHeader="true" sidebar="false" standardStylesheets="false">
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <div id="lightning" />
+
+    <script>
+        $Lightning.use("c:inputLookupExample", function() {
+          $Lightning.createComponent("C:inputLokup",
+          { 
+              label : "AccountLabel" ,
+              type : "Account",
+              className : "form-control"
+              
+          },
+          "lightning",
+          function(cmp) {
+            console.log("Component created!");
+          });
+        });
+    </script>
+    
+</apex:page>

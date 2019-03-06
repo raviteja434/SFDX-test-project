@@ -1,0 +1,22 @@
+<apex:page Controller="MyFirstClass">
+    <apex:form >
+        <apex:pageBlock title="Hello {!$User.LastName}!">
+            my first input is : <apex:inputtext value="{!x}" /> 
+            <br/>
+            <br/>
+            my second input is : <apex:inputtext value="{!y}" />
+            <br/>
+            <br/>
+            <apex:commandlink action="{!mySecMethod}" value="Add"/>
+            <br/>
+            <br/>
+            <b>Output : </b> 
+            <br/>
+            <br/>
+            this is my first value : <apex:outputtext value="{!s}" />
+            <br/>
+            <br/>
+            this is my second value : <apex:outputtext value="{!sMUX}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

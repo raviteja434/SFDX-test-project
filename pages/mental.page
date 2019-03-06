@@ -1,0 +1,19 @@
+<apex:page StandardController="Account" extensions="accountExt">
+
+<apex:form >
+    <apex:outputLabel >Phone</apex:outputLabel>
+    <apex:inputField label="Phone" value="{!Account.Phone}"/><br/>
+    
+    
+    
+    <apex:outputLabel >Output Phone</apex:outputLabel>
+    <apex:outputField value="{!Account.Phone}"/><br/>
+    
+    
+   <apex:commandButton action="{!save}" value="Save"/>
+    
+</apex:form>
+  
+
+
+</apex:page>

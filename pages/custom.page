@@ -1,0 +1,8 @@
+<apex:page >
+
+
+<c:BoxedText borderWidth="15" text="Example 1"/>
+<c:BoxedText borderWidth="15" text="Example 2"/>
+
+
+</apex:page>
